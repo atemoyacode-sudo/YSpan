@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "id": "belowzero",
-  "version": "0.1.0-experimental",
-  "name": "Below Zero Bridge Experimental",
+  "version": "0.1.0-preview.2",
+  "name": "YSpan Preview",
   "environment": "client",
   "entrypoints": {
     "client": [

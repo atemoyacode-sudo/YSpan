@@ -1,5 +1,7 @@
 {
-  "created_at": "2026-11-01T01:21:02.176263+09:00",
+  "release": "v0.1.0.preview.2",
+  "client_internal_version": "0.1.0-preview.2",
+  "created_at": "2026-11-01T02:25:52.634121+09:00",
   "artifacts": {
     "below-zero-client-0.1.0-experimental.jar": {
       "sha256": "b6888516dd6beda774278e9a517a068e705ee8c9a0619a78a16333a278efcda7",
@@ -8,25 +10,34 @@
     "BelowZeroBridge-0.1.0-experimental.jar": {
       "sha256": "bf8424ba71ffd90e3f8916654bac15df47ad0fd91929dc0cd0eddc393e1e14d7",
       "size": 12176
+    },
+    "yspan-client-0.1.0-preview.2.jar": {
+      "sha256": "eefb6eeed4f15fddd3760ca45a5a6f3873aa35617e573edfbc54832b669fbb62",
+      "size": 33028
     }
   },
   "sources": {
-    "client/src/main/resources/fabric.mod.json": "67f8a7a6450cc60e54aada6e0e76d71ce623970b47dbbcdd3920113689785555",
-    "client/src/main/resources/belowzero.mixins.json": "0ff515a750ebcdb90e15e713171931cec433edff0280899783bd6a7ea2388dbc",
-    "client/src/main/java/jp/arils/belowzero/Probe.java": "03173148a18a9baf7451c0626880d30e5aedf9922d619de62a85052073206bf6",
-    "client/src/main/java/jp/arils/belowzero/BridgeState.java": "235de88eba920c04312f028d09fcd5564d839ff2f12f738aae0ecbce858b3fef",
     "client/src/main/java/jp/arils/belowzero/BelowZeroClient.java": "e579b1eeccd26c482e1d7121c3466622a6bb34b9ddceba55489192c5cd269a52",
+    "client/src/main/java/jp/arils/belowzero/BridgeNegotiation.java": "4dd0ecf70b4c2d516c3ebe909f48e855b4c36d79253244de7a6891f94678fc32",
+    "client/src/main/java/jp/arils/belowzero/BridgeState.java": "7ef36230e97057b89592df9c5ba2ea76280d791a3217ae51e45d3347bd62427a",
+    "client/src/main/java/jp/arils/belowzero/CompatibilityProbe.java": "f6a4a658de82f223b7628d61ca36c8199fca4d0438df2a847f8968679f41b649",
+    "client/src/main/java/jp/arils/belowzero/Probe.java": "03173148a18a9baf7451c0626880d30e5aedf9922d619de62a85052073206bf6",
+    "client/src/main/java/jp/arils/belowzero/mixin/ChunkMixin.java": "ebdf91a9abb5e99d14f092616b4c8f301f151b4f439176709ab40c0ce8fc9bf4",
+    "client/src/main/java/jp/arils/belowzero/mixin/FogMixin.java": "60b8337d24d51ca64cb1a5e8b38802c047ad63ca75bf275d19ba31c98bbe8284",
+    "client/src/main/java/jp/arils/belowzero/mixin/LevelMixin.java": "c284091cf901dc17dabc1c060654f18048bc6f1df4f6a51a8df6e1b4051f375e",
+    "client/src/main/java/jp/arils/belowzero/mixin/LightMixin.java": "679c50e57fe8e9af3e2ab45889174d07790c2b7eff60fb98f242f8b43c859b88",
+    "client/src/main/java/jp/arils/belowzero/mixin/MacIconMixin.java": "45b76dd835c72fbb7f56bc9f2b3d29c7a92a5d1be26c1110af1d0312d32ffc69",
+    "client/src/main/java/jp/arils/belowzero/mixin/NetworkMixin.java": "31d681e745882231ca470f2e383e37aa2433ad7e33804b1b7288f34aeb0a57a7",
     "client/src/main/java/jp/arils/belowzero/mixin/RegionMixin.java": "24883cbaaadf8287f5d485bea2a465ff05242accf2d89430b1a7af4bd7d15c70",
     "client/src/main/java/jp/arils/belowzero/mixin/RendererMixin.java": "27b965b55e2fe164e8fc43553149ea91519a529187513f485a723e34f49ec1d4",
-    "client/src/main/java/jp/arils/belowzero/mixin/LightMixin.java": "679c50e57fe8e9af3e2ab45889174d07790c2b7eff60fb98f242f8b43c859b88",
-    "client/src/main/java/jp/arils/belowzero/mixin/NetworkMixin.java": "60b7e8458e29299074fb7078c78b18034d1e0277b478892baaf33892a3032add",
-    "client/src/main/java/jp/arils/belowzero/mixin/MacIconMixin.java": "45b76dd835c72fbb7f56bc9f2b3d29c7a92a5d1be26c1110af1d0312d32ffc69",
-    "client/src/main/java/jp/arils/belowzero/mixin/ViewAreaMixin.java": "f47bdb3ad57caa472f65d9d109220ba13bed3f707408daaa6993af848e46d9e0",
-    "client/src/main/java/jp/arils/belowzero/mixin/TickMixin.java": "919656bc56660acd9ea013270e4bbfd9ebb9ebac9dcb69c3662ea07d88c67fb2",
-    "client/src/main/java/jp/arils/belowzero/mixin/ChunkMixin.java": "ebdf91a9abb5e99d14f092616b4c8f301f151b4f439176709ab40c0ce8fc9bf4",
-    "client/src/main/java/jp/arils/belowzero/mixin/LevelMixin.java": "c284091cf901dc17dabc1c060654f18048bc6f1df4f6a51a8df6e1b4051f375e",
-    "client/src/main/java/jp/arils/belowzero/mixin/FogMixin.java": "60b8337d24d51ca64cb1a5e8b38802c047ad63ca75bf275d19ba31c98bbe8284",
+    "client/src/main/java/jp/arils/belowzero/mixin/TickMixin.java": "dc29d228017e9756731b9e1fa3c200b148e9a6acadb7094e38ba659e316342d8",
+    "client/src/main/java/jp/arils/belowzero/mixin/ViewAreaMixin.java": "ffcd3ad11fe346a98c082a070e7d12f0cb3fa450fbe1f9c601cbe601d582042a",
+    "client/src/main/resources/belowzero.mixins.json": "0ff515a750ebcdb90e15e713171931cec433edff0280899783bd6a7ea2388dbc",
+    "client/src/main/resources/fabric.mod.json": "d8f40cd8322c0f01fb28e49fe77f0ac724bbf49f06dc3a039749725d639b9762",
+    "client/src/test/java/jp/arils/belowzero/NegotiationCheck.java": "964475fbfef4863a29d4dbd7414f0889c46a65422bc2715e855c03917c898551",
     "server/src/jp/arils/belowzero/BelowZeroBridge.java": "4fbf53188de448d31e370e764e6507c3a2e77b3e599b76a7491b82ac80bc2c48"
   },
-  "publication_copy": true
+  "historical_preview1": "evidence/preview1-manifest.json",
+  "legacy_client_artifact": "below-zero-client-0.1.0-experimental.jar",
+  "server_companion_unchanged": true
 }

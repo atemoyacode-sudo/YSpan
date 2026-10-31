@@ -1,0 +1,27 @@
+{
+  "disabled_control_same_overworld_floor": "void_air on client, stone verified on server",
+  "result": "pass",
+  "scope": "1.16.5 Fabric + Paper 26.3 build 230, local synthetic world",
+  "normal_packaged_jar_launch": true,
+  "negative_y_render_and_collision": true,
+  "walk_distance_blocks": 1.8996004544472491,
+  "native_break_and_place_server_confirmed": true,
+  "verified_player_y": [
+    -63,
+    0,
+    256,
+    318
+  ],
+  "end_and_return_dimension_switch": true,
+  "real_end_portal_from_y": -2.4641593749554445,
+  "production_pi_modified": false,
+  "all_versions_supported": false,
+  "unverified": [
+    "Lunar/Forge/OptiFine/Sodium compatibility",
+    "friend client and real stronghold",
+    "general block entity NBT and signage",
+    "fluids/redstone/pistons/vehicles/mobs end-to-end",
+    "long-run performance and multiple players",
+    "all Java versions and Bedrock"
+  ]
+}

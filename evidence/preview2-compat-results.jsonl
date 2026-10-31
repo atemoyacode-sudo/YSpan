@@ -1,0 +1,5 @@
+{"result":"PASS","scenario":"vanilla-first","active":false,"sections":0,"handshakes":0,"advertised":false,"min_y":0,"max_y":256,"y":4.0,"on_ground":true,"floor":"Block{minecraft:grass_block}[snowy\u003dfalse]"}
+{"result":"PASS","scenario":"companion","active":true,"sections":200,"handshakes":1,"advertised":true,"min_y":-64,"max_y":320,"y":-2.0,"on_ground":true,"floor":"Block{minecraft:stone}"}
+{"result":"PASS","scenario":"vanilla-after-companion","active":false,"sections":0,"handshakes":0,"advertised":false,"min_y":0,"max_y":256,"y":4.0,"on_ground":true,"floor":"Block{minecraft:grass_block}[snowy\u003dfalse]"}
+{"result":"PASS","scenario":"companion-return","active":true,"sections":200,"handshakes":1,"advertised":true,"min_y":-64,"max_y":320,"y":-2.0,"on_ground":true,"floor":"Block{minecraft:stone}"}
+{"result":"PASS","scenario":"disconnect","active":false,"sections":0,"handshakes":0,"advertised":false,"min_y":0,"max_y":256}

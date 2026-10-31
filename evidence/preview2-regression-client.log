@@ -1,0 +1,79 @@
+[02:25:27] [main/INFO]: Loading Minecraft 1.16.5 with Fabric Loader 0.16.14
+[02:25:27] [main/INFO]: Fabric is preparing JARs on first launch, this may take a few seconds...
+[02:25:27] [main/INFO]: Loading 5 mods:
+	- belowzero 0.1.0-preview.2
+	- fabricloader 0.16.14
+	   \-- mixinextras 0.4.1
+	- java 21
+	- minecraft 1.16.5
+[02:25:27] [main/INFO]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=file:<LOCAL_RUNTIME> Service=Knot/Fabric Env=CLIENT
+[02:25:27] [main/INFO]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.4.1).
+[02:25:28] [main/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[02:25:29] [main/INFO]: Setting user: BZProbe
+[02:25:29] [main/INFO]: [STDOUT]: [BelowZero] Experimental 1.16.5 client loaded; inactive until server handshake
+[02:25:29] [main/INFO]: Backend library: LWJGL version 3.3.2-snapshot
+[02:25:29] [main/INFO]: [STDERR]: [LWJGL] [ThreadLocalUtil] Unsupported JNI version detected, this may result in a crash. Please inform LWJGL developers.
+[02:25:30] [main/ERROR]: Error while loading the narrator : java.lang.UnsatisfiedLinkError: <LOCAL_RUNTIME> dlopen(<LOCAL_RUNTIME> 0x0001): tried: '<LOCAL_RUNTIME> (fat file, but missing compatible architecture (have 'i386,x86_64', need 'arm64e, arm64e.v1, arm64, arm64')), '/System/Volumes/Preboot/Cryptexes/OS<LOCAL_RUNTIME> (no such file), '<LOCAL_RUNTIME> (fat file, but missing compatible architecture (have 'i386,x86_64', need 'arm64e, arm64e.v1, arm64, arm64'))
+[02:25:30] [main/INFO]: Reloading ResourceManager: Default
+[02:25:30] [Realms Notification Availability checker #1/INFO]: Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: FabricMC
+[02:25:30] [main/INFO]: OpenAL initialized.
+[02:25:30] [main/INFO]: Sound engine started
+[02:25:30] [main/INFO]: Created: 1024x1024x4 minecraft:textures/atlas/blocks.png-atlas
+[02:25:31] [main/INFO]: Created: 256x128x4 minecraft:textures/atlas/signs.png-atlas
+[02:25:31] [main/INFO]: Created: 1024x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[02:25:31] [main/INFO]: Created: 1024x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[02:25:31] [main/INFO]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
+[02:25:31] [main/INFO]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
+[02:25:31] [main/INFO]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[02:25:31] [main/INFO]: Created: 256x256x0 minecraft:textures/atlas/particles.png-atlas
+[02:25:31] [main/INFO]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
+[02:25:31] [main/INFO]: Created: 256x128x0 minecraft:textures/atlas/mob_effects.png-atlas
+[02:25:33] [main/INFO]: Connecting to 127.0.0.1, 25576
+[02:25:33] [main/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[02:25:34] [main/WARN]: Unknown custom packed identifier: minecraft:register
+[02:25:34] [main/WARN]: Unknown custom packed identifier: vv:server_details
+[02:25:34] [main/INFO]: [CHAT] BZProbe joined the game
+[02:25:34] [main/INFO]: Loaded 32 advancements
+[02:25:34] [main/INFO]: [STDOUT]: [BelowZero] ACTIVE dimension=minecraft:overworld range=-64..319
+[02:25:36] [main/INFO]: [STDOUT]: [BelowZero PROBE] floor=Block{minecraft:stone} y=-2.0 received=160
+[02:25:36] [main/INFO]: [STDOUT]: [BelowZero PROBE] server stage=floor-ready pos=8.5,-2.0,8.5 target=COBBLESTONE onGround=true
+[02:25:38] [main/INFO]: [STDOUT]: [BelowZero PROBE] server stage=walked pos=10.39960045444725,-2.0,8.5 target=COBBLESTONE onGround=true
+[02:25:39] [main/INFO]: [STDOUT]: [BelowZero PROBE] sent native break below zero
+[02:25:40] [main/INFO]: [STDOUT]: [BelowZero PROBE] server stage=broken pos=10.654844128044159,-2.0,8.5 target=AIR onGround=true
+[02:25:41] [main/INFO]: [STDOUT]: [BelowZero PROBE] sent native place below zero
+[02:25:43] [main/INFO]: [STDOUT]: [BelowZero PROBE] client placed=Block{minecraft:cobblestone}
+[02:25:43] [main/INFO]: [STDOUT]: [BelowZero PROBE] server stage=placed pos=10.654844128044159,-2.0,8.5 target=COBBLESTONE onGround=true
+[02:25:43] [IO-Worker-15/INFO]: [STDOUT]: [BelowZero PROBE] screenshot=Saved screenshot as below-zero-proof.png
+[02:25:44] [main/INFO]: [STDOUT]: [BelowZero PROBE] initial checks finished; boundary tests begin
+[02:25:45] [main/INFO]: [STDOUT]: [BelowZero PROBE] server stage=goto-bottom pos=40.5,-63.0,8.5 target=COBBLESTONE onGround=true
+[02:25:48] [main/INFO]: [STDOUT]: [BelowZero PROBE] BOUNDARY_PASS bottom floor=Block{minecraft:stone} playerY=-63.0 dimension=minecraft:overworld
+[02:25:48] [main/INFO]: [STDOUT]: [BelowZero PROBE] server stage=bottom-verified pos=40.5,-63.0,8.5 target=COBBLESTONE onGround=true
+[02:25:48] [main/INFO]: [STDOUT]: [BelowZero PROBE] server stage=goto-seam pos=72.5,0.0,8.5 target=COBBLESTONE onGround=true
+[02:25:51] [main/INFO]: [STDOUT]: [BelowZero PROBE] BOUNDARY_PASS seam floor=Block{minecraft:stone} playerY=0.0 dimension=minecraft:overworld
+[02:25:51] [main/INFO]: [STDOUT]: [BelowZero PROBE] server stage=seam-verified pos=72.5,0.0,8.5 target=COBBLESTONE onGround=true
+[02:25:51] [main/INFO]: [STDOUT]: [BelowZero PROBE] server stage=goto-upper pos=104.5,256.0,8.5 target=COBBLESTONE onGround=true
+[02:25:54] [main/INFO]: [STDOUT]: [BelowZero PROBE] BOUNDARY_PASS upper floor=Block{minecraft:stone} playerY=256.0 dimension=minecraft:overworld
+[02:25:54] [main/INFO]: [STDOUT]: [BelowZero PROBE] server stage=upper-verified pos=104.5,256.0,8.5 target=COBBLESTONE onGround=true
+[02:25:54] [main/INFO]: [STDOUT]: [BelowZero PROBE] server stage=goto-top pos=136.5,318.0,8.5 target=COBBLESTONE onGround=true
+[02:25:57] [main/INFO]: [STDOUT]: [BelowZero PROBE] BOUNDARY_PASS top floor=Block{minecraft:stone} playerY=318.0 dimension=minecraft:overworld
+[02:25:57] [main/INFO]: [STDOUT]: [BelowZero PROBE] server stage=top-verified pos=136.5,318.0,8.5 target=COBBLESTONE onGround=true
+[02:25:57] [main/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[02:25:57] [main/INFO]: [STDOUT]: [BelowZero PROBE] server stage=goto-end pos=8.5,8.0,8.5 target=VOID_AIR onGround=true
+[02:25:57] [main/INFO]: [STDOUT]: [BelowZero] ACTIVE dimension=minecraft:the_end range=0..255
+[02:25:57] [main/INFO]: [STDOUT]: [BelowZero] ACTIVE dimension=minecraft:the_end range=0..255
+[02:26:00] [main/INFO]: [STDOUT]: [BelowZero PROBE] BOUNDARY_PASS end floor=Block{minecraft:stone} playerY=8.0 dimension=minecraft:the_end
+[02:26:00] [main/INFO]: [STDOUT]: [BelowZero PROBE] server stage=end-verified pos=8.5,8.0,8.5 target=VOID_AIR onGround=true
+[02:26:00] [main/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[02:26:00] [main/INFO]: [STDOUT]: [BelowZero PROBE] server stage=goto-return pos=8.5,-2.0,8.5 target=COBBLESTONE onGround=true
+[02:26:00] [main/INFO]: [STDOUT]: [BelowZero] ACTIVE dimension=minecraft:overworld range=-64..319
+[02:26:00] [main/INFO]: [STDOUT]: [BelowZero] ACTIVE dimension=minecraft:overworld range=-64..319
+[02:26:03] [main/INFO]: [STDOUT]: [BelowZero PROBE] BOUNDARY_PASS return floor=Block{minecraft:stone} playerY=-2.0 dimension=minecraft:overworld
+[02:26:03] [main/INFO]: [STDOUT]: [BelowZero PROBE] ALL_BOUNDARY_TESTS_FINISHED
+[02:26:03] [main/INFO]: [STDOUT]: [BelowZero PROBE] server stage=return-verified pos=8.5,-2.0,8.5 target=COBBLESTONE onGround=true
+[02:26:03] [main/INFO]: [STDOUT]: [BelowZero PROBE] server stage=goto-portal pos=8.5,-2.0,8.5 target=AIR onGround=true
+[02:26:06] [main/INFO]: [STDOUT]: [BelowZero PROBE] portal floor=Block{minecraft:end_portal}
+[02:26:07] [main/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[02:26:07] [main/INFO]: [STDOUT]: [BelowZero] ACTIVE dimension=minecraft:the_end range=0..255
+[02:26:07] [main/INFO]: [STDOUT]: [BelowZero] ACTIVE dimension=minecraft:the_end range=0..255
+[02:26:08] [main/INFO]: [STDOUT]: [BelowZero PROBE] REAL_PORTAL_PASS playerY=49.0
+[02:26:08] [main/INFO]: [STDOUT]: [BelowZero PROBE] server stage=portal-verified pos=100.5,49.0,0.5 target=VOID_AIR onGround=true

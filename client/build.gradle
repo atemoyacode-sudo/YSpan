@@ -2,9 +2,9 @@ plugins {
  id 'fabric-loom' version '1.8.13'
  id 'maven-publish'
 }
-version = '0.1.0-experimental'
+version = '0.1.0-preview.2'
 group = 'jp.arils.belowzero'
-base { archivesName = 'below-zero-client' }
+base { archivesName = 'yspan-client' }
 repositories { mavenCentral() }
 dependencies {
  minecraft 'com.mojang:minecraft:1.16.5'
@@ -28,3 +28,11 @@ tasks.withType(JavaCompile).configureEach { options.release = 8 }
 java { sourceCompatibility = JavaVersion.VERSION_1_8; targetCompatibility = JavaVersion.VERSION_1_8; withSourcesJar() }
 
 if (project.hasProperty("belowzeroControl")) { loom.runs.client.vmArg "-Dbelowzero.disabled=true" }
+
+// Connection lifecycle regression checks, without starting Minecraft.
+tasks.register('negotiationCheck', JavaExec) {
+ dependsOn testClasses
+ classpath = sourceSets.test.runtimeClasspath
+ mainClass = 'jp.arils.belowzero.NegotiationCheck'
+}
+tasks.named('check') { dependsOn 'negotiationCheck' }

@@ -38,5 +38,35 @@ for key in ['client_jar','server_jar']:
 for local in [root/'production-run/mods/below-zero-client-0.1.0-experimental.jar',root/'test-server/plugins/BelowZeroBridge-0.1.0-experimental.jar']:
  if local.exists():assert hashlib.sha256(local.read_bytes()).hexdigest()==manifest['artifacts'][local.name]['sha256']
 results={'disabled_control_same_overworld_floor':'void_air on client, stone verified on server','result' :'pass','scope':'1.16.5 Fabric + Paper 26.3 build 230, local synthetic world','normal_packaged_jar_launch':True,'negative_y_render_and_collision':True,'walk_distance_blocks':distance,'native_break_and_place_server_confirmed':True,'verified_player_y':[-63,0,256,318],'end_and_return_dimension_switch':True,'real_end_portal_from_y':float(portal.group(1)),'production_pi_modified':False,'all_versions_supported':False,'unverified':['Lunar/Forge/OptiFine/Sodium compatibility','friend client and real stronghold','general block entity NBT and signage','fluids/redstone/pistons/vehicles/mobs end-to-end','long-run performance and multiple players','all Java versions and Bedrock']}
+# Initial-preview results above remain historical, tied to their original JAR hash.
+historical=results
+compat=(e/'preview2-compat-client.log').read_text()
+current=[json.loads(line) for line in (e/'preview2-compat-results.jsonl').read_text().splitlines()]
+assert [r['scenario'] for r in current]==['vanilla-first','companion','vanilla-after-companion','companion-return','disconnect']
+assert all(r['result']=='PASS' for r in current)
+assert 'ALL_SCENARIOS_PASS' in compat
+assert 'Loading Minecraft 1.16.5 with Fabric Loader 0.16.14' in compat
+assert 'Loaded Fabric development mappings' not in compat
+assert not re.search(r'YSpan COMPAT.*FAIL|Mixin apply.*failed|Companion data rejected',compat)
+for r in current:
+ if r['scenario'] in ['vanilla-first','vanilla-after-companion','disconnect']:
+  assert not r['active'] and not r['advertised'] and r['handshakes']==0 and r['sections']==0
+  assert r['min_y']==0 and r['max_y']==256
+ else:
+  assert r['active'] and r['advertised'] and r['handshakes']==1 and r['sections']>0
+  assert r['y']==-2 and r['on_ground']
+assert (e/'preview2-compat-server.log').read_text().count('target=COBBLESTONE onGround=true')==2
+assert 'Negotiation checks passed: 20' in (e/'preview2-build.log').read_text()
+assert 'BUILD SUCCESSFUL' in (e/'preview2-build.log').read_text()
+for name,digest in manifest['sources'].items():
+ assert hashlib.sha256((root/name).read_bytes()).hexdigest()==digest,name
+assert manifest['artifacts']['BelowZeroBridge-0.1.0-experimental.jar']==json.loads((e/'preview1-manifest.json').read_text())['artifacts']['BelowZeroBridge-0.1.0-experimental.jar']
+regression=(e/'preview2-regression-client.log').read_text()
+for stage in ['bottom','seam','upper','top','end','return']:
+ assert 'BOUNDARY_PASS '+stage+' ' in regression
+assert 'REAL_PORTAL_PASS' in regression
+assert not re.search(r'BOUNDARY_FAIL|REAL_PORTAL_FAIL|Companion data rejected|Mixin apply.*failed',regression)
+assert 'target=AIR' in regression and 'target=COBBLESTONE' in regression
+results={'release':'v0.1.0.preview.2','result':'pass','current':{'normal_packaged_client':True,'negotiation_checks':20,'scenarios':[r['scenario'] for r in current],'no_unsolicited_vanilla_handshakes':True,'vanilla_after_companion_clears_state':True,'negative_y_native_break_place':True,'height_boundaries_and_end_portal_regression':True,'server_companion_unchanged':True},'historical_preview1':historical,'unverified':['third-party production servers and anti-cheat','singleplayer gameplay','live unregister / malformed companion / silent companion','other mods and launchers','other Minecraft versions and Bedrock','long-running or multiplayer performance']}
 (root/'verification.json').write_text(json.dumps(results,ensure_ascii=False,indent=2)+'\n')
 print(json.dumps(results,ensure_ascii=False,indent=2))
