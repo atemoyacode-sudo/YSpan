@@ -1,0 +1,62 @@
+{
+  "scope": "public candidate repository and recursively decoded JAR/ZIP members; PNG metadata inventory",
+  "removed": [
+    "machine-specific JDK and temporary cache paths in build helper",
+    "test UUIDs and loopback socket endpoints from public logs"
+  ],
+  "preserved": [
+    "synthetic player BZProbe and test coordinates, explicitly documented",
+    "public jp.arils package/channel identifiers needed by the unchanged binaries",
+    "Minecraft service URLs, not credentials",
+    "Screenshots show generic CPU/GPU model and synthetic in-game coordinates; no real player or server information"
+  ],
+  "modified_logs": [
+    "evidence/final-control-server.log",
+    "evidence/final-packaged-server.log",
+    "evidence/final-packaged-client.log",
+    "evidence/final-control-client.log"
+  ],
+  "runtime_rebuilt_or_retested": false,
+  "binary_hash_matches": {
+    "below-zero-client-0.1.0-experimental.jar": true,
+    "BelowZeroBridge-0.1.0-experimental.jar": true
+  },
+  "png_chunks": {
+    "below-zero-proof.png": [
+      "IDAT",
+      "IEND",
+      "IHDR"
+    ],
+    "control-disabled.png": [
+      "IDAT",
+      "IEND",
+      "IHDR"
+    ],
+    "boundary-bottom.png": [
+      "IDAT",
+      "IEND",
+      "IHDR"
+    ],
+    "boundary-top.png": [
+      "IDAT",
+      "IEND",
+      "IHDR"
+    ],
+    "portal-arrival.png": [
+      "IDAT",
+      "IEND",
+      "IHDR"
+    ],
+    "portal-before-entry.png": [
+      "IDAT",
+      "IEND",
+      "IHDR"
+    ]
+  },
+  "findings": [],
+  "result": "pass",
+  "jar_members_checked": 65,
+  "selected_project_name": "YSpan",
+  "intended_repository": "Atemoyacode-sudo/YSpan",
+  "review_stage": "pre-publication static content review"
+}

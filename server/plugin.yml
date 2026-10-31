@@ -1,0 +1,5 @@
+name: BelowZeroBridge
+version: 0.1.0-experimental
+main: jp.arils.belowzero.BelowZeroBridge
+api-version: '26.3'
+depend: [ViaVersion, ViaBackwards]

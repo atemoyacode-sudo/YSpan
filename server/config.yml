@@ -1,0 +1,5 @@
+# Explicit opt-in; do not install on production without gameplay verification.
+stream-radius: 2
+sections-per-tick: 2
+refresh-ticks: 100
+test-fixture: false

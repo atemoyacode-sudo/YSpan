@@ -1,0 +1,13 @@
+{
+  "client_jar": {
+    "name": "below-zero-client-0.1.0-experimental.jar",
+    "sha256": "b6888516dd6beda774278e9a517a068e705ee8c9a0619a78a16333a278efcda7"
+  },
+  "server_jar": {
+    "name": "BelowZeroBridge-0.1.0-experimental.jar",
+    "sha256": "bf8424ba71ffd90e3f8916654bac15df47ad0fd91929dc0cd0eddc393e1e14d7"
+  },
+  "client_launch": "Fabric KnotClient, fabric.development=false, Java 21.0.7",
+  "server_launch": "Paper 26.3 build 230, Java 25.0.1, loopback 25576",
+  "purpose": "Record of actual tested artifact bytes; no Minecraft binaries or user credentials included"
+}

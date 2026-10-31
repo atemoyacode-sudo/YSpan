@@ -1,0 +1,20 @@
+{
+  "required": true,
+  "package": "jp.arils.belowzero.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "client": [
+    "NetworkMixin",
+    "LevelMixin",
+    "ChunkMixin",
+    "ViewAreaMixin",
+    "RendererMixin",
+    "RegionMixin",
+    "LightMixin",
+    "FogMixin",
+    "TickMixin",
+    "MacIconMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

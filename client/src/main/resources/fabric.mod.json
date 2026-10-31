@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "belowzero",
+  "version": "0.1.0-experimental",
+  "name": "Below Zero Bridge Experimental",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "jp.arils.belowzero.BelowZeroClient"
+    ]
+  },
+  "mixins": [
+    "belowzero.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.14",
+    "minecraft": "1.16.5",
+    "java": ">=8"
+  }
+}

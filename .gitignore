@@ -1,0 +1,14 @@
+.DS_Store
+.gradle/
+**/.gradle/
+**/build/
+**/classes/
+**/run/
+production-run/
+test-server/
+*.log
+!evidence/*.log
+.env
+.env.*
+*.pem
+*.key
