@@ -6,7 +6,8 @@
   "runtime_tested": "normal packaged Forge 36.2.42 / synthetic loopback servers",
   "removed": [
     "private local filesystem paths from new public logs",
-    "synthetic UUIDs and ephemeral socket endpoints from new public logs"
+    "synthetic UUIDs and ephemeral socket endpoints from new public logs",
+    "trailing whitespace normalized in Forge public logs; Windows wrapper retains upstream CRLF"
   ],
   "preserved": [
     "public atemoyacode-sudo identity and jp.arils identifiers",

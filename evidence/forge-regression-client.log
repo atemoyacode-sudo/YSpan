@@ -16,19 +16,19 @@
 [12:18:59] [Render thread/ERROR] [mojang/Narrator]: Error while loading the narrator : java.lang.UnsatisfiedLinkError: <LOCAL_RUNTIME> dlopen(<LOCAL_RUNTIME>, 0x0001): tried: '<LOCAL_RUNTIME> (fat file, but missing compatible architecture (have 'i386,x86_64', need 'arm64e, arm64e.v1, arm64, arm64')), '/System/Volumes/Preboot/Cryptexes/OS<LOCAL_RUNTIME> (no such file), '<LOCAL_RUNTIME> (fat file, but missing compatible architecture (have 'i386,x86_64', need 'arm64e, arm64e.v1, arm64, arm64'))
 [12:18:59] [Render thread/INFO] [minecraft/SimpleReloadableResourceManager]: Reloading ResourceManager: Default, Mod Resources
 [12:18:59] [modloading-worker-4/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Configuration file <TEST_WORKSPACE>/yspan-forge-validation-20261101/regression-run/config/forge-client.toml is not correct. Correcting
-[12:18:59] [modloading-worker-4/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key client was corrected from null to its default, SimpleCommentedConfig:{}. 
-[12:18:59] [modloading-worker-4/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key client.zoomInMissingModelTextInGui was corrected from null to its default, false. 
-[12:18:59] [modloading-worker-4/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key client.forgeCloudsEnabled was corrected from null to its default, true. 
-[12:18:59] [modloading-worker-4/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key client.disableStairSlabCulling was corrected from null to its default, false. 
-[12:18:59] [modloading-worker-4/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key client.alwaysSetupTerrainOffThread was corrected from null to its default, false. 
-[12:18:59] [modloading-worker-4/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key client.forgeLightPipelineEnabled was corrected from null to its default, true. 
-[12:18:59] [modloading-worker-4/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key client.experimentalForgeLightPipelineEnabled was corrected from null to its default, false. 
-[12:18:59] [modloading-worker-4/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key client.selectiveResourceReloadEnabled was corrected from null to its default, true. 
-[12:18:59] [modloading-worker-4/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key client.showLoadWarnings was corrected from null to its default, true. 
-[12:18:59] [modloading-worker-4/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key client.useCombinedDepthStencilAttachment was corrected from null to its default, false. 
+[12:18:59] [modloading-worker-4/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key client was corrected from null to its default, SimpleCommentedConfig:{}.
+[12:18:59] [modloading-worker-4/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key client.zoomInMissingModelTextInGui was corrected from null to its default, false.
+[12:18:59] [modloading-worker-4/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key client.forgeCloudsEnabled was corrected from null to its default, true.
+[12:18:59] [modloading-worker-4/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key client.disableStairSlabCulling was corrected from null to its default, false.
+[12:18:59] [modloading-worker-4/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key client.alwaysSetupTerrainOffThread was corrected from null to its default, false.
+[12:18:59] [modloading-worker-4/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key client.forgeLightPipelineEnabled was corrected from null to its default, true.
+[12:18:59] [modloading-worker-4/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key client.experimentalForgeLightPipelineEnabled was corrected from null to its default, false.
+[12:18:59] [modloading-worker-4/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key client.selectiveResourceReloadEnabled was corrected from null to its default, true.
+[12:18:59] [modloading-worker-4/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key client.showLoadWarnings was corrected from null to its default, true.
+[12:18:59] [modloading-worker-4/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key client.useCombinedDepthStencilAttachment was corrected from null to its default, false.
 [12:18:59] [modloading-worker-4/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Configuration file <TEST_WORKSPACE>/yspan-forge-validation-20261101/regression-run/config/forge-common.toml is not correct. Correcting
-[12:18:59] [modloading-worker-4/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general was corrected from null to its default, SimpleCommentedConfig:{}. 
-[12:18:59] [modloading-worker-4/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general.defaultWorldType was corrected from null to its default, default. 
+[12:18:59] [modloading-worker-4/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general was corrected from null to its default, SimpleCommentedConfig:{}.
+[12:18:59] [modloading-worker-4/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general.defaultWorldType was corrected from null to its default, default.
 [12:18:59] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
 [12:19:00] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [forge] Found status: AHEAD Current: 36.2.42 Target: null
 [12:19:02] [Render thread/INFO] [minecraft/SoundSystem]: OpenAL initialized.
