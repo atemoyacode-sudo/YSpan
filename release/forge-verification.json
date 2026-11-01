@@ -1,0 +1,35 @@
+{
+  "release": "v0.1.0.preview.3",
+  "result": "pass",
+  "loader": "Forge 36.2.42 / Minecraft 1.16.5",
+  "java": "Azul Java 8u512 (ARM)",
+  "packaged_production_jar": true,
+  "negotiation_checks": 20,
+  "scenarios": [
+    "vanilla-first",
+    "companion",
+    "vanilla-after-companion",
+    "companion-return",
+    "disconnect"
+  ],
+  "walk_distance_blocks": 1.8996004544472491,
+  "height_boundaries_player_y": [
+    -63,
+    0,
+    256,
+    318
+  ],
+  "negative_y_native_break_place": true,
+  "end_and_return": true,
+  "real_end_portal_from_y": -2.4641593749554445,
+  "existing_fabric_and_server_artifacts_unchanged": true,
+  "test_runtime_native_override": "LWJGL 3.3.2 for macOS ARM, not bundled",
+  "unverified": [
+    "friend actual environment",
+    "Windows/Linux and normal x86 launcher runtime",
+    "other Forge versions",
+    "other mods, OptiFine and shaders",
+    "long-running multiplayer performance",
+    "all other Minecraft versions and Bedrock"
+  ]
+}

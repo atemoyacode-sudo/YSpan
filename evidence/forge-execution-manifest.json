@@ -1,0 +1,29 @@
+{
+  "release": "v0.1.0.preview.3",
+  "client_jar": {
+    "name": "yspan-client-forge-0.1.0-preview.3.jar",
+    "sha256": "4eed458e5b180cfc9ca49db5648b30f13d0ffc60cb0da1863a8cda7f8a5069cd",
+    "size": 34906
+  },
+  "server_jar": {
+    "name": "BelowZeroBridge-0.1.0-experimental.jar",
+    "sha256": "bf8424ba71ffd90e3f8916654bac15df47ad0fd91929dc0cd0eddc393e1e14d7",
+    "size": 12176
+  },
+  "launch_target": "fmlclient",
+  "development_classes": false,
+  "minecraft": "1.16.5",
+  "forge": "36.2.42",
+  "java": "Azul 8u512 aarch64",
+  "mixin": "0.8.4",
+  "test_only_native_runtime": "LWJGL 3.3.2 macOS ARM; not bundled with the mod",
+  "class_major_version": 52,
+  "mods": [
+    "Minecraft",
+    "Forge",
+    "YSpan"
+  ],
+  "optifine": false,
+  "shaders": false,
+  "production_pi_modified": false
+}

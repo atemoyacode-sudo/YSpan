@@ -1,0 +1,97 @@
+2026-11-01 12:18:55,958 main WARN Advanced terminal features are not available in this environment
+[12:18:55] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: ModLauncher running: args [--version, 1.16.5-forge-36.2.42, --accessToken, ❄❄❄❄❄❄❄❄, --username, BZProbe, --gameDir, <TEST_WORKSPACE>/yspan-forge-validation-20261101/regression-run, --assetsDir, <LOCAL_RUNTIME>, --assetIndex, 1.16.5-1.16, --width, 960, --height, 640, --launchTarget, fmlclient, --fml.forgeVersion, 36.2.42, --fml.mcVersion, 1.16.5, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20210115.111550]
+[12:18:55] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: ModLauncher 8.1.3+8.1.3+main-8.1.x.c94d18ec starting: java version 1.8.0_512 by Azul Systems, Inc.
+[12:18:56] [main/INFO] [ne.mi.fm.lo.FixSSL/CORE]: Added Lets Encrypt root certificates as additional trust
+[12:18:56] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.4 Source=file:<TEST_WORKSPACE>/yspan-forge-validation-20261101/launcher/libraries/org/spongepowered/mixin/0.8.4/mixin-0.8.4.jar Service=ModLauncher Env=CLIENT
+[12:18:56] [main/WARN] [ne.mi.fm.lo.FMLConfig/CORE]: Configuration file <TEST_WORKSPACE>/yspan-forge-validation-20261101/regression-run/config/fml.toml is not correct. Correcting
+[12:18:56] [main/WARN] [ne.mi.fm.lo.FMLConfig/CORE]: Incorrect key [defaultConfigPath] was corrected from null to defaultconfigs
+[12:18:56] [main/ERROR] [mixin/]: Mixin config yspan-forge.mixins.json does not specify "minVersion" property
+[12:18:56] [main/INFO] [cp.mo.mo.LaunchServiceHandler/MODLAUNCHER]: Launching target 'fmlclient' with arguments [--version, 1.16.5-forge-36.2.42, --gameDir, <TEST_WORKSPACE>/yspan-forge-validation-20261101/regression-run, --assetsDir, <LOCAL_RUNTIME>, --accessToken, ❄❄❄❄❄❄❄❄, --username, BZProbe, --assetIndex, 1.16.5-1.16, --width, 960, --height, 640]
+[12:18:58] [Render thread/INFO] [mojang/YggdrasilAuthenticationService]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[12:18:59] [Render thread/INFO] [minecraft/Minecraft]: Setting user: BZProbe
+[12:18:59] [Render thread/INFO] [minecraft/Minecraft]: Backend library: LWJGL version 3.3.2+13
+[12:18:59] [modloading-worker-2/INFO] [STDOUT/]: [jp.arils.belowzero.BelowZeroForge:<init>:12]: [YSpan] Forge preview loaded; inactive until companion negotiation
+[12:18:59] [modloading-worker-4/INFO] [ne.mi.co.ForgeMod/FORGEMOD]: Forge mod loading, version 36.2.42, for MC 1.16.5 with MCP 20210115.111550
+[12:18:59] [modloading-worker-4/INFO] [ne.mi.co.MinecraftForge/FORGE]: MinecraftForge v36.2.42 Initialized
+[12:18:59] [Render thread/ERROR] [mojang/Narrator]: Error while loading the narrator : java.lang.UnsatisfiedLinkError: <LOCAL_RUNTIME> dlopen(<LOCAL_RUNTIME>, 0x0001): tried: '<LOCAL_RUNTIME> (fat file, but missing compatible architecture (have 'i386,x86_64', need 'arm64e, arm64e.v1, arm64, arm64')), '/System/Volumes/Preboot/Cryptexes/OS<LOCAL_RUNTIME> (no such file), '<LOCAL_RUNTIME> (fat file, but missing compatible architecture (have 'i386,x86_64', need 'arm64e, arm64e.v1, arm64, arm64'))
+[12:18:59] [Render thread/INFO] [minecraft/SimpleReloadableResourceManager]: Reloading ResourceManager: Default, Mod Resources
+[12:18:59] [modloading-worker-4/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Configuration file <TEST_WORKSPACE>/yspan-forge-validation-20261101/regression-run/config/forge-client.toml is not correct. Correcting
+[12:18:59] [modloading-worker-4/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key client was corrected from null to its default, SimpleCommentedConfig:{}. 
+[12:18:59] [modloading-worker-4/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key client.zoomInMissingModelTextInGui was corrected from null to its default, false. 
+[12:18:59] [modloading-worker-4/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key client.forgeCloudsEnabled was corrected from null to its default, true. 
+[12:18:59] [modloading-worker-4/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key client.disableStairSlabCulling was corrected from null to its default, false. 
+[12:18:59] [modloading-worker-4/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key client.alwaysSetupTerrainOffThread was corrected from null to its default, false. 
+[12:18:59] [modloading-worker-4/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key client.forgeLightPipelineEnabled was corrected from null to its default, true. 
+[12:18:59] [modloading-worker-4/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key client.experimentalForgeLightPipelineEnabled was corrected from null to its default, false. 
+[12:18:59] [modloading-worker-4/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key client.selectiveResourceReloadEnabled was corrected from null to its default, true. 
+[12:18:59] [modloading-worker-4/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key client.showLoadWarnings was corrected from null to its default, true. 
+[12:18:59] [modloading-worker-4/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key client.useCombinedDepthStencilAttachment was corrected from null to its default, false. 
+[12:18:59] [modloading-worker-4/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Configuration file <TEST_WORKSPACE>/yspan-forge-validation-20261101/regression-run/config/forge-common.toml is not correct. Correcting
+[12:18:59] [modloading-worker-4/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general was corrected from null to its default, SimpleCommentedConfig:{}. 
+[12:18:59] [modloading-worker-4/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general.defaultWorldType was corrected from null to its default, default. 
+[12:18:59] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
+[12:19:00] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [forge] Found status: AHEAD Current: 36.2.42 Target: null
+[12:19:02] [Render thread/INFO] [minecraft/SoundSystem]: OpenAL initialized.
+[12:19:02] [Render thread/INFO] [minecraft/SoundEngine]: Sound engine started
+[12:19:02] [Render thread/INFO] [minecraft/AtlasTexture]: Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
+[12:19:02] [Render thread/INFO] [minecraft/AtlasTexture]: Created: 256x128x4 minecraft:textures/atlas/signs.png-atlas
+[12:19:02] [Render thread/INFO] [minecraft/AtlasTexture]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[12:19:02] [Render thread/INFO] [minecraft/AtlasTexture]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[12:19:02] [Render thread/INFO] [minecraft/AtlasTexture]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
+[12:19:02] [Render thread/INFO] [minecraft/AtlasTexture]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
+[12:19:02] [Render thread/INFO] [minecraft/AtlasTexture]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[12:19:02] [Render thread/INFO] [minecraft/AtlasTexture]: Created: 256x256x0 minecraft:textures/atlas/particles.png-atlas
+[12:19:02] [Render thread/INFO] [minecraft/AtlasTexture]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
+[12:19:02] [Render thread/INFO] [minecraft/AtlasTexture]: Created: 128x128x0 minecraft:textures/atlas/mob_effects.png-atlas
+[12:19:02] [Realms Notification Availability checker #1/INFO] [mojang/RealmsClient]: Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: FabricMC
+[12:19:04] [Render thread/INFO] [STDOUT/]: [jp.arils.belowzero.Probe:tick:22]: [BelowZero PROBE] screen=net.minecraft.client.gui.screen.MainMenuScreen overlay=net.minecraft.client.gui.ResourceLoadProgressGui
+[12:19:04] [Render thread/INFO] [minecraft/ConnectingScreen]: Connecting to 127.0.0.1, 25576
+[12:19:05] [Netty Client IO #0/INFO] [ne.mi.fm.ne.NetworkHooks/]: Connected to a vanilla server. Catching up missing behaviour.
+[12:19:05] [IO-Worker-15/INFO] [STDOUT/]: [jp.arils.belowzero.Probe:lambda$tick$1:23]: [BelowZero PROBE] Saved screenshot as startup-proof.png
+[12:19:05] [Render thread/INFO] [mojang/YggdrasilAuthenticationService]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[12:19:05] [Render thread/WARN] [minecraft/ClientPlayNetHandler]: Unknown custom packet identifier: vv:server_details
+[12:19:05] [Render thread/INFO] [minecraft/NewChatGui]: [CHAT] BZProbe joined the game
+[12:19:05] [Render thread/INFO] [minecraft/AdvancementList]: Loaded 32 advancements
+[12:19:05] [Render thread/INFO] [STDOUT/]: [jp.arils.belowzero.BridgeState:receive:67]: [BelowZero] ACTIVE dimension=minecraft:overworld range=-64..319
+[12:19:07] [Render thread/INFO] [STDOUT/]: [jp.arils.belowzero.Probe:tick:32]: [BelowZero PROBE] floor=Block{minecraft:stone} y=-2.0 received=136
+[12:19:07] [Render thread/INFO] [STDOUT/]: [jp.arils.belowzero.Probe:reply:71]: [BelowZero PROBE] server stage=floor-ready pos=8.5,-2.0,8.5 target=COBBLESTONE onGround=true
+[12:19:08] [Render thread/INFO] [STDOUT/]: [jp.arils.belowzero.Probe:reply:71]: [BelowZero PROBE] server stage=walked pos=10.39960045444725,-2.0,8.5 target=COBBLESTONE onGround=true
+[12:19:09] [Render thread/INFO] [STDOUT/]: [jp.arils.belowzero.Probe:tick:35]: [BelowZero PROBE] sent native break below zero
+[12:19:11] [Render thread/INFO] [STDOUT/]: [jp.arils.belowzero.Probe:reply:71]: [BelowZero PROBE] server stage=broken pos=10.654844128044159,-2.0,8.5 target=AIR onGround=true
+[12:19:12] [Render thread/INFO] [STDOUT/]: [jp.arils.belowzero.Probe:tick:37]: [BelowZero PROBE] sent native place below zero
+[12:19:14] [Render thread/INFO] [STDOUT/]: [jp.arils.belowzero.Probe:tick:38]: [BelowZero PROBE] client placed=Block{minecraft:cobblestone}
+[12:19:14] [Render thread/INFO] [STDOUT/]: [jp.arils.belowzero.Probe:reply:71]: [BelowZero PROBE] server stage=placed pos=10.654844128044159,-2.0,8.5 target=COBBLESTONE onGround=true
+[12:19:14] [IO-Worker-15/INFO] [STDOUT/]: [jp.arils.belowzero.Probe:lambda$tick$2:38]: [BelowZero PROBE] screenshot=Saved screenshot as below-zero-proof.png
+[12:19:15] [Render thread/INFO] [STDOUT/]: [jp.arils.belowzero.Probe:tick:39]: [BelowZero PROBE] initial checks finished; boundary tests begin
+[12:19:16] [Render thread/INFO] [STDOUT/]: [jp.arils.belowzero.Probe:reply:71]: [BelowZero PROBE] server stage=goto-bottom pos=40.5,-63.0,8.5 target=COBBLESTONE onGround=true
+[12:19:19] [Render thread/INFO] [STDOUT/]: [jp.arils.belowzero.Probe:tick:47]: [BelowZero PROBE] BOUNDARY_PASS bottom floor=Block{minecraft:stone} playerY=-63.0 dimension=minecraft:overworld
+[12:19:19] [Render thread/INFO] [STDOUT/]: [jp.arils.belowzero.Probe:reply:71]: [BelowZero PROBE] server stage=bottom-verified pos=40.5,-63.0,8.5 target=COBBLESTONE onGround=true
+[12:19:19] [Render thread/INFO] [STDOUT/]: [jp.arils.belowzero.Probe:reply:71]: [BelowZero PROBE] server stage=goto-seam pos=72.5,0.0,8.5 target=COBBLESTONE onGround=true
+[12:19:22] [Render thread/INFO] [STDOUT/]: [jp.arils.belowzero.Probe:tick:47]: [BelowZero PROBE] BOUNDARY_PASS seam floor=Block{minecraft:stone} playerY=0.0 dimension=minecraft:overworld
+[12:19:22] [Render thread/INFO] [STDOUT/]: [jp.arils.belowzero.Probe:reply:71]: [BelowZero PROBE] server stage=seam-verified pos=72.5,0.0,8.5 target=COBBLESTONE onGround=true
+[12:19:22] [Render thread/INFO] [STDOUT/]: [jp.arils.belowzero.Probe:reply:71]: [BelowZero PROBE] server stage=goto-upper pos=104.5,256.0,8.5 target=COBBLESTONE onGround=true
+[12:19:25] [Render thread/INFO] [STDOUT/]: [jp.arils.belowzero.Probe:tick:47]: [BelowZero PROBE] BOUNDARY_PASS upper floor=Block{minecraft:stone} playerY=256.0 dimension=minecraft:overworld
+[12:19:25] [Render thread/INFO] [STDOUT/]: [jp.arils.belowzero.Probe:reply:71]: [BelowZero PROBE] server stage=upper-verified pos=104.5,256.0,8.5 target=COBBLESTONE onGround=true
+[12:19:25] [Render thread/INFO] [STDOUT/]: [jp.arils.belowzero.Probe:reply:71]: [BelowZero PROBE] server stage=goto-top pos=136.5,318.0,8.5 target=COBBLESTONE onGround=true
+[12:19:28] [Render thread/INFO] [STDOUT/]: [jp.arils.belowzero.Probe:tick:47]: [BelowZero PROBE] BOUNDARY_PASS top floor=Block{minecraft:stone} playerY=318.0 dimension=minecraft:overworld
+[12:19:28] [Render thread/INFO] [STDOUT/]: [jp.arils.belowzero.Probe:reply:71]: [BelowZero PROBE] server stage=top-verified pos=136.5,318.0,8.5 target=COBBLESTONE onGround=true
+[12:19:28] [Render thread/INFO] [mojang/YggdrasilAuthenticationService]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[12:19:28] [Render thread/INFO] [STDOUT/]: [jp.arils.belowzero.Probe:reply:71]: [BelowZero PROBE] server stage=goto-end pos=8.5,8.0,8.5 target=VOID_AIR onGround=true
+[12:19:28] [Render thread/INFO] [STDOUT/]: [jp.arils.belowzero.BridgeState:receive:67]: [BelowZero] ACTIVE dimension=minecraft:the_end range=0..255
+[12:19:28] [Render thread/INFO] [STDOUT/]: [jp.arils.belowzero.BridgeState:receive:67]: [BelowZero] ACTIVE dimension=minecraft:the_end range=0..255
+[12:19:31] [Render thread/INFO] [STDOUT/]: [jp.arils.belowzero.Probe:tick:47]: [BelowZero PROBE] BOUNDARY_PASS end floor=Block{minecraft:stone} playerY=8.0 dimension=minecraft:the_end
+[12:19:31] [Render thread/INFO] [STDOUT/]: [jp.arils.belowzero.Probe:reply:71]: [BelowZero PROBE] server stage=end-verified pos=8.5,8.0,8.5 target=VOID_AIR onGround=true
+[12:19:31] [Render thread/INFO] [mojang/YggdrasilAuthenticationService]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[12:19:31] [Render thread/INFO] [STDOUT/]: [jp.arils.belowzero.Probe:reply:71]: [BelowZero PROBE] server stage=goto-return pos=8.5,-2.0,8.5 target=COBBLESTONE onGround=true
+[12:19:31] [Render thread/INFO] [STDOUT/]: [jp.arils.belowzero.BridgeState:receive:67]: [BelowZero] ACTIVE dimension=minecraft:overworld range=-64..319
+[12:19:31] [Render thread/INFO] [STDOUT/]: [jp.arils.belowzero.BridgeState:receive:67]: [BelowZero] ACTIVE dimension=minecraft:overworld range=-64..319
+[12:19:34] [Render thread/INFO] [STDOUT/]: [jp.arils.belowzero.Probe:tick:47]: [BelowZero PROBE] BOUNDARY_PASS return floor=Block{minecraft:stone} playerY=-2.0 dimension=minecraft:overworld
+[12:19:34] [Render thread/INFO] [STDOUT/]: [jp.arils.belowzero.Probe:tick:54]: [BelowZero PROBE] ALL_BOUNDARY_TESTS_FINISHED
+[12:19:34] [Render thread/INFO] [STDOUT/]: [jp.arils.belowzero.Probe:reply:71]: [BelowZero PROBE] server stage=return-verified pos=8.5,-2.0,8.5 target=COBBLESTONE onGround=true
+[12:19:34] [Render thread/INFO] [STDOUT/]: [jp.arils.belowzero.Probe:reply:71]: [BelowZero PROBE] server stage=goto-portal pos=8.5,-2.0,8.5 target=AIR onGround=true
+[12:19:37] [Render thread/INFO] [STDOUT/]: [jp.arils.belowzero.Probe:tick:58]: [BelowZero PROBE] portal floor=Block{minecraft:end_portal}
+[12:19:38] [Render thread/INFO] [mojang/YggdrasilAuthenticationService]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[12:19:38] [Render thread/INFO] [STDOUT/]: [jp.arils.belowzero.BridgeState:receive:67]: [BelowZero] ACTIVE dimension=minecraft:the_end range=0..255
+[12:19:38] [Render thread/INFO] [STDOUT/]: [jp.arils.belowzero.BridgeState:receive:67]: [BelowZero] ACTIVE dimension=minecraft:the_end range=0..255
+[12:19:39] [Render thread/INFO] [STDOUT/]: [jp.arils.belowzero.Probe:tick:64]: [BelowZero PROBE] REAL_PORTAL_PASS playerY=49.0
+[12:19:39] [Render thread/INFO] [STDOUT/]: [jp.arils.belowzero.Probe:reply:71]: [BelowZero PROBE] server stage=portal-verified pos=100.5,49.0,0.5 target=VOID_AIR onGround=true

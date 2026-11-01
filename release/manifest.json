@@ -1,5 +1,5 @@
 {
-  "release": "v0.1.0.preview.2",
+  "release": "v0.1.0.preview.3",
   "client_internal_version": "0.1.0-preview.2",
   "created_at": "2026-11-01T02:25:52.634121+09:00",
   "artifacts": {
@@ -14,6 +14,10 @@
     "yspan-client-0.1.0-preview.2.jar": {
       "sha256": "eefb6eeed4f15fddd3760ca45a5a6f3873aa35617e573edfbc54832b669fbb62",
       "size": 33028
+    },
+    "yspan-client-forge-0.1.0-preview.3.jar": {
+      "sha256": "4eed458e5b180cfc9ca49db5648b30f13d0ffc60cb0da1863a8cda7f8a5069cd",
+      "size": 34906
     }
   },
   "sources": {
@@ -39,5 +43,22 @@
   },
   "historical_preview1": "evidence/preview1-manifest.json",
   "legacy_client_artifact": "below-zero-client-0.1.0-experimental.jar",
-  "server_companion_unchanged": true
+  "server_companion_unchanged": true,
+  "forge_client_internal_version": "0.1.0-preview.3",
+  "historical_preview2": "evidence/preview2-manifest.json",
+  "forge_sources": {
+    "forge/build.gradle": "f703d036aff3ecdca1e81662c5079b1b2da01bad72c7f8ddc678c2bc62212412",
+    "forge/class-aliases.json": "925e00cab1b795ab561dd5026bcc7a859cdc1040d0edf32b140828472b73712c",
+    "forge/gradle/wrapper/gradle-wrapper.jar": "e996d452d2645e70c01c11143ca2d3742734a28da2bf61f25c82bdc288c9e637",
+    "forge/gradle/wrapper/gradle-wrapper.properties": "23b7b98fa7f086c7310fb49d39084bdb472003a03f3b8508b43098f381d53114",
+    "forge/gradle.properties": "2ac018c4c4d5984943eb6fd48efb888fa5116fccc2d7d0811f604bae2732f438",
+    "forge/gradlew": "63135287117a1e6d12c84580f1f49c61d1ba02218ecd28660605e97f976e7d65",
+    "forge/gradlew.bat": "af835f98787e9269af5a046edcb821a592fed372139df7b947b471a63cfc236b",
+    "forge/settings.gradle": "e42f8133467a0ef0882356d28124183cc4b690fe2a7d9f5b41e9d594f6cef321",
+    "forge/src/main/java/jp/arils/belowzero/BelowZeroForge.java": "51501910bb14d9ae11e9f1e223f34af78748945413b3d32a36cc0fb466ad6d82",
+    "forge/src/main/java/jp/arils/belowzero/mixin/LightMixin.java": "f9f4f9f59eef9622fa255420dc5c19a357b111fb66447b2c0f6de8af03518bf9",
+    "forge/src/main/resources/META-INF/mods.toml": "a9b32a576894a133c9f9d3228cd9c001a9e3b06f55c60e347df975bcd0e10c50",
+    "forge/src/main/resources/pack.mcmeta": "81d61993bc2cb9fe68336e54470fa59a8d56e0ceb277a70fac051045388ceb9f",
+    "forge/src/main/resources/yspan-forge.mixins.json": "55196b1ab3c03519a259385f977343c8a9d9a410a852b5036385c8fc7a42d0fd"
+  }
 }

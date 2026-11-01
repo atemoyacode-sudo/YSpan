@@ -1,53 +1,60 @@
 {
-  "scope": "public candidate repository and recursively decoded JAR/ZIP members; PNG metadata inventory",
+  "release": "v0.1.0.preview.3",
+  "scope": "tracked and candidate files, recursively decoded JAR/ZIP entries, Forge screenshot metadata",
+  "files_checked": 102,
+  "archive_members_checked": 144,
+  "runtime_tested": "normal packaged Forge 36.2.42 / synthetic loopback servers",
   "removed": [
-    "machine-specific JDK and temporary cache paths in build helper",
-    "test UUIDs and loopback socket endpoints from public logs"
+    "private local filesystem paths from new public logs",
+    "synthetic UUIDs and ephemeral socket endpoints from new public logs"
   ],
   "preserved": [
-    "synthetic player BZProbe and test coordinates, explicitly documented",
-    "public jp.arils package/channel identifiers needed by the unchanged binaries",
-    "Minecraft service URLs, not credentials",
-    "Screenshots show generic CPU/GPU model and synthetic in-game coordinates; no real player or server information"
+    "public atemoyacode-sudo identity and jp.arils identifiers",
+    "synthetic BZProbe and dedicated test coordinates",
+    "Minecraft and Forge service URLs, not credentials"
   ],
-  "modified_logs": [
-    "evidence/final-control-server.log",
-    "evidence/final-packaged-server.log",
-    "evidence/final-packaged-client.log",
-    "evidence/final-control-client.log"
-  ],
-  "runtime_rebuilt_or_retested": false,
-  "binary_hash_matches": {
-    "below-zero-client-0.1.0-experimental.jar": true,
-    "BelowZeroBridge-0.1.0-experimental.jar": true
-  },
   "png_chunks": {
-    "below-zero-proof.png": [
+    "forge-compat-vanilla-after-companion.png": [
       "IDAT",
       "IEND",
       "IHDR"
     ],
-    "control-disabled.png": [
+    "forge-compat-vanilla-first.png": [
       "IDAT",
       "IEND",
       "IHDR"
     ],
-    "boundary-bottom.png": [
+    "forge-boundary-bottom.png": [
       "IDAT",
       "IEND",
       "IHDR"
     ],
-    "boundary-top.png": [
+    "forge-below-zero-proof.png": [
       "IDAT",
       "IEND",
       "IHDR"
     ],
-    "portal-arrival.png": [
+    "forge-compat-companion.png": [
       "IDAT",
       "IEND",
       "IHDR"
     ],
-    "portal-before-entry.png": [
+    "forge-portal-arrival.png": [
+      "IDAT",
+      "IEND",
+      "IHDR"
+    ],
+    "forge-boundary-top.png": [
+      "IDAT",
+      "IEND",
+      "IHDR"
+    ],
+    "forge-portal-before-entry.png": [
+      "IDAT",
+      "IEND",
+      "IHDR"
+    ],
+    "forge-compat-companion-return.png": [
       "IDAT",
       "IEND",
       "IHDR"
@@ -55,8 +62,5 @@
   },
   "findings": [],
   "result": "pass",
-  "jar_members_checked": 65,
-  "selected_project_name": "YSpan",
-  "intended_repository": "Atemoyacode-sudo/YSpan",
-  "review_stage": "pre-publication static content review"
+  "historical_initial_review": "evidence/preview1-privacy-review.json"
 }

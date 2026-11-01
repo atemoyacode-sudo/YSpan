@@ -1,14 +1,14 @@
 # YSpan — Preview
 
 > **Preview / 開発途中のプレビュー版です。安定版ではありません。**
-> 現在の動作確認対象はFabric 1.16.5とPaper 26.3の組み合わせです。
+> 現在の動作確認対象はFabric / Forge 1.16.5とPaper 26.3の組み合わせです。
 > 今後、対応バージョンと機能を段階的に拡張する予定です。実装時期や全バージョン対応を保証するものではありません。
 
-**English:** This is an early preview, not a stable release. The current prototype targets Fabric 1.16.5 with Paper 26.3. Broader version support and functionality are planned; availability and timelines are not guaranteed.
+**English:** This is an early preview, not a stable release. The current prototype targets Fabric or Forge 1.16.5 with Paper 26.3. Broader version support and functionality are planned; availability and timelines are not guaranteed.
 
 **YSpanは、専用Mod＋サーバープラグインで、1.16.5から新しいサーバーのY=0未満を表示・移動・操作するための試作品です。ローカルの実クライアントで動作を確認しています。**
 
-全バージョン対応版や完成した互換プラグインではありません。実運用サーバーには導入していません。
+全バージョン対応版や完成した互換プラグインではありません。ここに記載した動作確認はローカルの専用ワールドで実施しています。
 
 ## 検証済みの組み合わせ
 
@@ -44,12 +44,13 @@ Modは不足セクションを別のメモリ領域に保持し、1.16.5のブ�
 
 ## プレビュー版のダウンロード
 
-配布ファイルは [GitHub Releases](https://github.com/atemoyacode-sudo/YSpan/releases) にあります。最新の公開版は **v0.1.0.preview.2**（Mod内部バージョン `0.1.0-preview.2`）です。
+配布ファイルは [GitHub Releases](https://github.com/atemoyacode-sudo/YSpan/releases) にあります。最新リリースは **v0.1.0.preview.3** です。Forge用Modを追加しています。Fabric用は動作を変えず、Preview 2のJAR（`0.1.0-preview.2`）を引き続き配布します。
 
 クライアントの表示名はYSpan Previewです。既存サーバーとの通信互換性のため、Modの内部ID `belowzero` と通信チャンネルは維持しています。サーバープラグインは初回プレビューと同一のJARです。
 
 ## ファイル
 
+- `release/yspan-client-forge-0.1.0-preview.3.jar`：Forge 1.16.5用Mod。Fabric版と同時に入れないでください。
 - `release/yspan-client-0.1.0-preview.2.jar`：Fabric 1.16.5用の最新Mod。Fabric APIは不要。古いModと同時に入れず、置き換えてください。
 - `release/below-zero-client-0.1.0-experimental.jar`：初回プレビューの証拠照合用に残した旧JARです。新規導入には使いません。
 - `release/BelowZeroBridge-0.1.0-experimental.jar`：Paper 26.3用プラグイン。ViaVersion/ViaBackwardsが必要。
@@ -68,9 +69,21 @@ Modは不足セクションを別のメモリ領域に保持し、1.16.5のブ�
 
 初回プレビューの高さ境界・ポータル試験の記録は履歴として維持しています。Preview 2でも同じ配布JARでY=-63・0・256・318、エンド往復、地下の実エンドポータル通過を再確認しました。記録は `evidence/preview2-regression-client.log` に保存しています。
 
+## Forge 1.16.5版（Preview 3）
+
+Forgeしか使えない場合は、`yspan-client-forge-0.1.0-preview.3.jar` をForge 1.16.5プロファイルの `mods` フォルダに入れてください。FabricもFabric APIも不要です。Fabric版と同時には入れません。Forgeは **36.2.42** で検証しています。
+
+既存のサーバープラグイン・通信プロトコルをそのまま使います。Forge版の追加のためにサーバーを再起動する必要はありません。対応プラグインのないサーバーでは補助機能を無効のままにし、専用要求を送信しません。切断・再接続で補助状態を消去します。
+
+配布用の再難読化済みJARを、開発用クラスを含まない通常のForge起動経路で検証しています。バニラ → 対応Paper → バニラ → 対応Paper → 切断、地下の歩行・破壊・設置、高さ境界・エンド移動の記録は `evidence/forge-*` と `forge-verification.json` に区別して保存します。
+
+検証環境はApple Silicon macOS / Azul Java 8u512 / Forge 36.2.42です。Apple Silicon向けの検証ランチャーだけは、ARMネイティブが存在しない旧LWJGL 3.2.1を既存のARM対応LWJGL 3.3.2ライブラリへ置き換えています。このライブラリやランチャーはModに同梱していません。友達のWindows環境・通常のx86ランチャー・他Modとの組み合わせは未確認です。OptiFine・シェーダーは使用していません。
+
+Forgeの古いMixinにはインターフェースへの注入の制約があるため、照明部分だけはForge用の接続実装を使い、無効時には元の照明エンジンへ委譲します。それ以外は `client/src` の実装からビルド時にクラス名を適応させて共有しています。
+
 ## 導入する場合の条件
 
-この実験では本番導入・友達のクライアント操作を行っていません。友達の通常環境とは別のFabric 1.16.5プロファイルと、バックアップしたテストサーバーで先に検証してください。友達側のゲームディレクトリの `mods` にクライアントJAR、サーバーの `plugins` にプラグインJARを置く構成です。Paperプラグイン側はサーバー再起動が必要です。`/reload` は使いません。
+友達の通常環境とは別のFabric 1.16.5プロファイルと、バックアップしたテストサーバーで先に検証してください。友達側のゲームディレクトリの `mods` に使用ローダーに合うクライアントJAR、サーバーの `plugins` にプラグインJARを置く構成です。Paperプラグイン側はサーバー再起動が必要です。`/reload` は使いません。
 
 **配布JARのデフォルトではテスト地形生成は無効（test-fixture=false）です。** テストコードはループバック接続と専用ワールド名の両方が一致する場合だけ地形を作成します。実行用のオフライン設定はローカル検証フォルダだけにあり、本番サーバーの設定ではありません。
 
@@ -86,7 +99,7 @@ Modは不足セクションを別のメモリ領域に保持し、1.16.5のブ�
 ## 未確認・制約
 
 - **1.16.5専用。** 全Javaバージョン・Bedrock対応は実装していません。
-- Lunar、Forge、OptiFine、Sodium等との組み合わせ、Windows/Linux、友達の実環境は未確認。
+- Lunar、OptiFine、Sodium、その他のModとの組み合わせ、Windows/Linux、友達の実環境は未確認。Forgeは下記の単独構成だけを検証。
 - 実運用サーバーのPaper build 223上、実際の要塞、複数人、長時間運用、Raspberry Pi上の負荷は未検証。
 - 地下・上空の補助送信範囲は現在半径2チャンク。バニラの描画距離全体を保証しません。
 - サーバーから未受信のセクションは空気となるため、受信前の高速移動では一時的な表示・予測のずれが起こり得ます。
@@ -105,7 +118,9 @@ Modは不足セクションを別のメモリ領域に保持し、1.16.5のブ�
 python3 build-server.py --paper-api /path/to/paper-api.jar --viaversion /path/to/ViaVersion.jar --libraries /path/to/paper-libraries
 ```
 
-`python3 verify-evidence.py` は、同梱された既存の試験記録とJARのハッシュを照合します。Minecraftを起動する追加試験ではありません。
+Forge版は `forge/` 内で `./gradlew build` を実行します。Gradle起動用のJDK 17以上と、Forgeの処理・コンパイル用のJDK 8が必要です。JDK 8を自動検出できない場合はGradleの `org.gradle.java.installations.paths` で指定してください。`forge/class-aliases.json` は共有実装で使う型名だけの対応表で、Minecraft全体のマッピングやゲーム本体は含みません。
+
+`python3 verify-evidence.py` は、同梱された既存の試験記録とJARのハッシュを照合します。`python3 verify-forge-evidence.py` はForge版の記録を照合します。Minecraftを起動する追加試験ではありません。
 
 Minecraft本体、完全な公式マッピング、通常のランチャー設定、アカウント認証情報、実サーバーのワールドや接続情報は同梱しません。ログのBZProbeと座標は専用テストワールド上の架空プレイヤー・試験用座標です。公開ログのUUIDと接続ソケット情報は置換済みです。
 

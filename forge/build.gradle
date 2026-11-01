@@ -1,0 +1,85 @@
+buildscript {
+ repositories { maven { url = 'https://maven.minecraftforge.net/' }; maven { url = 'https://repo.spongepowered.org/repository/maven-public/'; content { includeGroup 'org.spongepowered' } }; mavenCentral() }
+ dependencies { classpath 'org.spongepowered:mixingradle:0.7-SNAPSHOT' }
+}
+plugins { id 'net.minecraftforge.gradle' version '6.0.54' }
+apply plugin: 'org.spongepowered.mixin'
+version = '0.1.0-preview.3'
+group = 'jp.arils.belowzero'
+base { archivesName = 'yspan-client-forge' }
+java { toolchain.languageVersion = JavaLanguageVersion.of(8); sourceCompatibility = JavaVersion.VERSION_1_8; targetCompatibility = JavaVersion.VERSION_1_8 }
+minecraft {
+ mappings channel: 'official', version: '1.16.5'
+ runs {
+  client {
+   workingDirectory project.file('run')
+   property 'forge.logging.console.level', 'info'
+   args '--username', 'BZProbe', '--width', '960', '--height', '640'
+   mods { belowzero { source sourceSets.main } }
+  }
+ }
+}
+repositories { maven { url = 'https://repo.spongepowered.org/repository/maven-public/'; content { includeGroup 'org.spongepowered' } } }
+dependencies {
+ minecraft 'net.minecraftforge:forge:1.16.5-36.2.42'
+ annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
+}
+mixin { add sourceSets.main, 'yspan.refmap.json'; config 'yspan-forge.mixins.json' }
+jar {
+ manifest { attributes 'MixinConfigs': 'yspan-forge.mixins.json', 'Implementation-Version': project.version }
+ finalizedBy 'reobfJar'
+}
+tasks.withType(JavaCompile).configureEach { options.encoding = 'UTF-8' }
+
+// Share the tested implementation. Forge 1.16.5 uses MCP class names with Mojang member names.
+def sharedJava = file('../client/src/main/java')
+def generatedJava = layout.buildDirectory.dir('generated/sources/shared')
+tasks.register('generateSharedSources') {
+ inputs.dir(sharedJava)
+ inputs.file('class-aliases.json')
+ outputs.dir(generatedJava)
+ doLast {
+  def aliases = new groovy.json.JsonSlurper().parse(file('class-aliases.json'))
+  def simple = [:]
+  aliases.each { from, to ->
+   def a = from.tokenize('/')[-1].tokenize('$')[-1]
+   def b = to.tokenize('/')[-1].tokenize('$')[-1]
+   if (a != b) simple[a] = b
+  }
+  delete(generatedJava)
+  fileTree(sharedJava).matching { include '**/*.java'; exclude '**/BelowZeroClient.java', '**/LightMixin.java' }.each { source ->
+   def text = source.getText('UTF-8')
+   text = text.replaceAll(/import (net\.minecraft\.[\w.]+)\.\*;/) { all, pkg ->
+    aliases.keySet().findAll { !it.contains('$') && it.substring(0, it.lastIndexOf('/')).replace('/', '.') == pkg }
+     .collect { 'import ' + it.replace('/', '.') + ';' }.join('\n')
+   }
+   aliases.keySet().sort { -it.length() }.each { from ->
+    text = text.replace(from, aliases[from])
+     .replace(from.replace('/', '.').replace('$', '.'), aliases[from].replace('/', '.').replace('$', '.'))
+   }
+   if (!simple.isEmpty()) {
+    def pattern = /\b(/ + simple.keySet().collect { java.util.regex.Pattern.quote(it) }.join('|') + /)\b/
+    text = text.replaceAll(pattern) { all, name -> simple[name] }
+   }
+   // Diagnostic-only compatibility driver: record focus state and maintain the synthetic held key.
+   if (source.name == 'CompatibilityProbe.java') {
+    text = text.replace('if(age==110)mc.options.keyLeft.setDown(false);', 'if(age>=100&&age<110)mc.options.keyLeft.setDown(true);if(age==110)mc.options.keyLeft.setDown(false);')
+    text = text.replace('initialX=mc.player.getX();initialZ=mc.player.getZ();', 'initialX=mc.player.getX();initialZ=mc.player.getZ();System.out.println("[YSpan COMPAT] walking screen="+(mc.screen==null?"none":mc.screen.getClass().getName()));')
+    text = text.replace('data.put("y",mc.player.getY());', 'data.put("x",mc.player.getX());data.put("z",mc.player.getZ());data.put("y",mc.player.getY());data.put("screen",mc.screen==null?"none":mc.screen.getClass().getName());')
+   }
+   def target = new File(generatedJava.get().asFile, sharedJava.toPath().relativize(source.toPath()).toString())
+   target.parentFile.mkdirs(); target.setText(text, 'UTF-8')
+  }
+ }
+}
+sourceSets.main.java.srcDir(generatedJava)
+tasks.named('compileJava') { dependsOn 'generateSharedSources' }
+
+sourceSets.test.java.srcDir('../client/src/test/java')
+tasks.register('negotiationCheck', JavaExec) {
+ dependsOn testClasses
+ classpath = sourceSets.test.runtimeClasspath
+ mainClass = 'jp.arils.belowzero.NegotiationCheck'
+ javaLauncher = javaToolchains.launcherFor { languageVersion = JavaLanguageVersion.of(8) }
+}
+tasks.named('check') { dependsOn 'negotiationCheck' }
